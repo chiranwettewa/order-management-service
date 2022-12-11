@@ -11,12 +11,11 @@ import java.time.Instant;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderResponse {
-    private long orderId;
-    private Instant orderDate;
-    private String orderStatus;
-    private long amount;
-    private ProductDetail productDetail;
-    private PaymentDetail paymentDetail;
+public class PaymentDetail {
+
+    private long paymentId;
+    private PaymentMode paymentMode;
+    private String paymentStatus;
+    private Instant paymentDate;
 
 }

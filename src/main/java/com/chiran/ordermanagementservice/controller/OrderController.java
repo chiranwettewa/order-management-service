@@ -1,6 +1,7 @@
 package com.chiran.ordermanagementservice.controller;
 
 import com.chiran.ordermanagementservice.model.OrderRequest;
+import com.chiran.ordermanagementservice.model.OrderResponse;
 import com.chiran.ordermanagementservice.service.OrderService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,12 @@ public class OrderController {
         long orderId = orderService.placeOrder(orderRequest);
         log.info("Order id: {}",orderId);
         return new ResponseEntity<>(orderId, HttpStatus.CREATED);
+    }
+
+    @GetMapping("/{orderId}")
+    public ResponseEntity<OrderResponse> getOrderDetails(@PathVariable Long orderId){
+        OrderResponse orderResponse = orderService.getOrderDetails(orderId);
+        return new ResponseEntity<>(orderResponse,HttpStatus.OK);
     }
 
 }
