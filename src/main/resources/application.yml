@@ -7,7 +7,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/order-management-service-db
-    password: root
+    password: Chiran1994#
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,7 +17,7 @@ spring:
 
 logging:
   file:
-    name: D:/logs/order-management-service.log
+    name: E:/logs/order-management-service.log
 
 resilience4j:
   circuitbreaker:
@@ -31,26 +31,6 @@ resilience4j:
         permitted-number-of-calls-in-half-open-state: 3
         sliding-window-size: 10
         sliding-window-type: COUNT_BASED
-
-management:
-  health:
-    circuitbreakers:
-      enabled: true
-  endpoints:
-    web:
-      exposure:
-        include: health
-  endpoint:
-    health:
-      show-details: always
-
-resilience4j.circuitbreaker:
-  configs:
-    default:
-      registerHealthIndicator: true
-  instances:
-    myCB:
-      baseConfig: default
 #eureka:
 #  instance:
 #    prefer-ip-address: true
