@@ -11,9 +11,6 @@ import org.springframework.web.client.RestTemplate;
 @EnableFeignClients
 public class OrderManagementServiceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(OrderManagementServiceApplication.class, args);
-
-	}
+	public static void main(String[] args) { SpringApplication.run(OrderManagementServiceApplication.class, args);}
 
 }
