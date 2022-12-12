@@ -10,7 +10,6 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableFeignClients
 public class OrderManagementServiceApplication {
-
 	public static void main(String[] args) { SpringApplication.run(OrderManagementServiceApplication.class, args);}
 
 }
